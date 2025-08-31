@@ -10,6 +10,7 @@ module josh.lynch.autobox5 {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires java.sql;
+    requires org.apache.poi.ooxml;
 
     opens josh.lynch.autobox5 to javafx.fxml;
     exports josh.lynch.autobox5;

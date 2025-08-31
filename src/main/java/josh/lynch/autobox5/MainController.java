@@ -9,6 +9,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.control.ScrollPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class MainController {
@@ -27,7 +28,7 @@ public class MainController {
                 setupHoverAnimation(button);
             }
         });
-        DatabaseManager.initialize();
+        DatabaseManager.initialize(new Stage());
     }
     private void setupHoverAnimation(Button button) {
         DropShadow glow = new DropShadow();
