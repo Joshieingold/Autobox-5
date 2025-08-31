@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="600" prefWidth="1000" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="josh.lynch.autobox5.MainController" stylesheets="@styles.css">
+
+    <!-- Main VBox in Center -->
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="10">
+            <!-- Top Navigation Bar -->
+            <HBox alignment="CENTER" fx:id="navBar" prefHeight="70.0" spacing="10" style="-fx-background-color: red; -fx-padding: 10;">
+                <children>
+                    <Button prefHeight="48.0" prefWidth="48.0" styleClass="nav-button" text="excel"/>
+                    <Button prefHeight="48.0" prefWidth="48.0" styleClass="nav-button" text="Excel"/>
+                    <Button prefHeight="48.0" prefWidth="48.0" styleClass="nav-button" text="Blitz"/>
+                    <Button prefHeight="48.0" prefWidth="48.0" styleClass="nav-button" text="Flexi"/>
+                    <Button prefHeight="48.0" prefWidth="48.0" styleClass="nav-button" text="WMS"/>
+                    <Button prefHeight="48.0" prefWidth="48.0" styleClass="nav-button" text="Stats"/>
+                    <Button prefHeight="48.0" prefWidth="48.0" styleClass="nav-button" text="settings"/>
+                </children>
+            </HBox>
+
+            <!-- Title Label -->
+            <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="349.0" style="-fx-font-size: 10px; -fx-font-weight: bold; -fx-text-fill: white; -fx-padding: 0; -fx-background-color: red; -fx-background-radius: 20px;" text="🔥 Welcome to Java Edition 🔥" textAlignment="CENTER">
+            <font>
+               <Font size="10.0" />
+            </font></Label>
+
+            <!-- Scrollable Content Area -->
+            <ScrollPane fx:id="scrollPane" fitToHeight="false" fitToWidth="true" hvalue="0.47" style="-fx-background: #121212; -fx-border-color: #121212;" vbarPolicy="AS_NEEDED" VBox.vgrow="ALWAYS">
+                <content>
+                    <VBox fx:id="contentBox" alignment="TOP_CENTER" spacing="8" style="-fx-padding: 15; -fx-background-color: #121212;">
+                        <!-- Rows will be added dynamically -->
+                    </VBox>
+                </content>
+            </ScrollPane>
+        </VBox>
+    </center>
+
+    <!-- Loading Bar at the Bottom -->
+    <bottom>
+        <ProgressBar fx:id="loadingBar" opacity="0.27" prefHeight="6.0" prefWidth="1000" progress="0.0" style="-fx-accent: red; -fx-background-color: black;">
+         <effect>
+            <Glow level="1.0" />
+         </effect></ProgressBar>
+    </bottom>
+
+</BorderPane>

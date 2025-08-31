@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" prefWidth="343.0" spacing="15" style="-fx-padding: 12; -fx-background-color: #1e1e1e; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0.2, 0, 3);" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="josh.lynch.autobox5.RowController">
+
+    <Label fx:id="indexLabel" style="-fx-text-fill: #ff5722; -fx-font-size: 16px; -fx-font-weight: bold; -fx-min-width: 40;" text="1" />
+
+    <TextField fx:id="inputField" promptText="Enter serial..." style="-fx-background-color: #2a2a2a; -fx-text-fill: white; -fx-background-radius: 6; -fx-padding: 6; -fx-prompt-text-fill: #888888;" HBox.hgrow="ALWAYS" />
+
+    <Circle fx:id="circle1" fill="Gray" radius="8" stroke="black" strokeWidth="0.5" />
+    <Circle fx:id="circle2" fill="Gray" radius="8" stroke="black" strokeWidth="0.5" />
+
+    <Button style="-fx-background-color: transparent; -fx-text-fill: #ff7043; -fx-font-size: 16px; -fx-cursor: hand;" text="🔍" />
+</HBox>

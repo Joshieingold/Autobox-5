@@ -1,0 +1,25 @@
+/* Base nav button style */
+.nav-button {
+    -fx-background-color: red;
+    -fx-border-color: white;
+    -fx-border-radius: 5px;
+    -fx-border-width: 2px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+    -fx-padding: 5 10 5 10;
+}
+
+/* Hover look (without animation, just target state) */
+.nav-button:hover {
+    -fx-background-color: pink;
+    -fx-border-color: white;
+    -fx-text-fill: white;
+}
+
+/* Pressed state */
+.nav-button:pressed {
+    -fx-background-color: gray;
+    -fx-text-fill: white;
+}
