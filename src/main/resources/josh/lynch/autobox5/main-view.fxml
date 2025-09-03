@@ -15,7 +15,7 @@
                 <children>
                     <Button prefHeight="48.0" prefWidth="48.0" styleClass="nav-button" text="excel"/>
                     <Button prefHeight="48.0" prefWidth="48.0" styleClass="nav-button" text="Excel"/>
-                    <Button prefHeight="48.0" prefWidth="48.0" styleClass="nav-button" text="Blitz"/>
+                    <Button fx:id="BlitzButton" onAction="#HandleBlitz" prefHeight="48.0" prefWidth="48.0" styleClass="nav-button" text="Blitz"/>
                     <Button prefHeight="48.0" prefWidth="48.0" styleClass="nav-button" text="Flexi"/>
                     <Button prefHeight="48.0" prefWidth="48.0" styleClass="nav-button" text="WMS"/>
                     <Button prefHeight="48.0" prefWidth="48.0" styleClass="nav-button" text="Stats"/>

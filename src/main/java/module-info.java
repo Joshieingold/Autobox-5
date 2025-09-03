@@ -11,6 +11,7 @@ module josh.lynch.autobox5 {
     requires eu.hansolo.tilesfx;
     requires java.sql;
     requires org.apache.poi.ooxml;
+    requires java.desktop;
 
     opens josh.lynch.autobox5 to javafx.fxml;
     exports josh.lynch.autobox5;

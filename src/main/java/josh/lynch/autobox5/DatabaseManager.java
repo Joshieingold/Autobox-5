@@ -179,25 +179,25 @@ public class DatabaseManager {
              Statement stmt = conn.createStatement()) {
 
             // Drop tables if they exist
-            stmt.execute(dropWMSTableSQL);
-            stmt.execute(dropERPTableSQL);
+            //stmt.execute(dropWMSTableSQL);
+            //stmt.execute(dropERPTableSQL);
 
             // Create tables
-            stmt.execute(createWMSTableSQL);
-            stmt.execute(createERPTableSQL);
+            //stmt.execute(createWMSTableSQL);
+            //stmt.execute(createERPTableSQL);
 
             // Prompt twice (once for each DB)
             System.out.println("Select Excel for WMS:");
-            populateDatabase("wms", stage);
+            //populateDatabase("wms", stage);
 
             System.out.println("Select Excel for ERP:");
-            populateDatabase("erp", stage);
+            //populateDatabase("erp", stage);
 
             // Print tables
-            printTable(stmt, "wms");
-            printTable(stmt, "erp");
+            //printTable(stmt, "wms");
+            //printTable(stmt, "erp");
 
-            System.out.println("Databases recreated and initialized.");
+            //System.out.println("Databases recreated and initialized.");
 
         } catch (SQLException e) {
             e.printStackTrace();

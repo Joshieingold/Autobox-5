@@ -12,16 +12,20 @@ import javafx.scene.control.ScrollPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.awt.*;
+import java.util.ArrayList;
+
 public class MainController {
 
     public HBox navBar;
     @FXML private VBox contentBox;
     @FXML private ScrollPane scrollPane; // new ScrollPane reference
     private int rowCount = 0;
+    ActiveSerials serials = new ActiveSerials();
     // For settings later
 
     @FXML
-    private void initialize() {
+    private void initialize() throws AWTException {
         addRow(); // first row
         navBar.getChildren().forEach(node -> {
             if (node instanceof Button button) {
@@ -94,5 +98,25 @@ public class MainController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public void getAllSerials() {
+        serials.clear();
+
+        for (var node : contentBox.getChildren()) {
+            if (node instanceof HBox row) {
+                RowController controller = (RowController) row.getUserData();
+                String serial = controller.getInputField().getText().trim();
+                if (!serial.isEmpty()) {
+                    serials.AddSerial(serial);
+                    System.out.println(serial);
+                }
+            }
+        }
+    }
+    @FXML private Button BlitzButton;
+    @FXML
+    private void HandleBlitz() throws AWTException {
+        getAllSerials();
+        serials.BlitzImport();
     }
 }
